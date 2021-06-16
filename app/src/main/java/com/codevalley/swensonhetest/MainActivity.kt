@@ -1,7 +1,6 @@
 package com.codevalley.swensonhetest
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     var images_object: JSONObject? = null
     var testList: ArrayList<TestModel2> = ArrayList<TestModel2>()
     var testModel2: TestModel2? = null
-    var testAdapter: TesstAdapterr? = null
+    var testAdapter: TestAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -125,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initRecycler() {
-        testAdapter = TesstAdapterr(this)
+        testAdapter = TestAdapter(this)
         val linearLayoutManager =
             LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         binding.rvTest.layoutManager = linearLayoutManager
